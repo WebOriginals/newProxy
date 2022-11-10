@@ -1,0 +1,73 @@
+//<Разметка текста>====================================================================================================
+.offer__title {
+
+}
+
+.h1,h1 {
+  @include adaptiveValue(font-size,40, 24);
+  font-weight: 600;
+}
+
+.h2,h2{
+  @include adaptiveValue(font-size,28, 22);
+  font-weight: 600;
+  @include adaptiveValue(margin-bottom,40,32);
+  @include mq('tablet') {
+    text-align: center;
+  }
+}
+
+.h3,h3{
+
+}
+
+.h4,h4{
+
+}
+
+.h5,h5{
+
+}
+
+.h6,h6{
+
+}
+
+
+//Стилизация кнопок
+.button-y{
+  background: $color_6;
+  color: $color_1;
+  padding: 0 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 600;
+  border-radius: rem(8);
+  border: 1px solid $color_6;
+
+  @include mq('tablet-wide') {
+    min-width: rem(188);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: darken($color_6, 5);
+    }
+  }
+  &:focus{
+    background: darken($color_6, 5);
+  }
+}
+//Стилизация input
+.input{
+  background: #FFFFFF;
+  border: 1px solid #414042;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: em(16) em(20);
+}
