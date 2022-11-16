@@ -6,7 +6,6 @@
       source(srcset="@_/assets/img/svg/first.svg" media="(min-width: 900px)")
       source(srcset="@_/assets/img/svg/first-tablet.svg" media="(min-width: 500px")
       img(src="@_/assets/img/svg/first-mobil.svg")
-
   .first__container
     h1 Купить проĸси — Приватные HTTP&SOCKS5
     p Со циальные сети, парсинг поисковых систем, онлайн-игры, веб-сёрфинг и многое другое
@@ -15,6 +14,8 @@
       span
         b 0 USD <br>
       span 0 USD/шт.
+  .first__cosmo
+    img(src="@_/assets/img/svg/cosmonauts1.svg")
 </template>
 
 <script>
@@ -31,22 +32,25 @@ export default {
   background: darkblue;
   color: $color_1;
   padding-top: rem(47);
-  padding-bottom: rem(100);
+  padding-bottom: rem(180);
   position: relative;
   @include mq('tablet') {
     padding-top: rem(47);
     padding-bottom: rem(320);
   }
+
   @include mq('tablet-wide') {
     padding-top: rem(80);
-    padding-bottom: rem(130);
+    padding-bottom: rem(160);
   }
+
   @include mq('desktop') {
     padding-bottom: rem(185);
   }
+
   @include mq('desktop') {
     padding-top: rem(130);
-    padding-bottom: rem(340);
+    padding-bottom: rem(430);
   }
 
   &__container{
@@ -79,9 +83,36 @@ export default {
     margin-bottom: rem(16);
     text-align: center;
   }
+
   p{
     margin-bottom: rem(40);
     text-align: center;
+  }
+
+  &__cosmo{
+    position: absolute;
+    z-index: 2;
+    bottom: 4%;
+    left: 55%;
+    width: 180px;
+
+    @include mq('tablet') {
+      width: 260px;
+      left: 60%;
+    }
+    @include mq('tablet-wide') {
+      width: 186px;
+      left: 60%;
+    }
+    @include mq('desktop') {
+      width: 300px;
+      bottom: 10%;
+      left: 55%;
+    }
+
+    img{
+      max-width:100%;
+    }
   }
 }
 </style>

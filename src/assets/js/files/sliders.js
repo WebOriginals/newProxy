@@ -8,9 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper, { Navigation, Pagination } from 'swiper';
-import {swiperbanner} from "./slider/banner.js";
-import {swiperCard} from "./slider/card.js";
-import {twoSlider} from "./slider/twoSlider.js";
+
 
 
 /*
@@ -24,6 +22,15 @@ EffectFade, Lazy, Manipulation
 // Добавление классов слайдерам
 // swiper главному блоку, swiper-wrapper оболочке, swiper-slide для слайдов
 export function bildSliders() {
+	if (window.outerWidth <= 766 && document.querySelector('.whyProxy__grid')) {
+		const slider = document.querySelector('.whyProxy__grid');
+		slider.classList.add('whyProxy-grid__swiper')
+	}
+	if (window.outerWidth <= 766 && document.querySelector('.proxyEveryone__cards')) {
+		const slider = document.querySelector('.proxyEveryone__cards');
+		slider.classList.add('proxyEveryone-cards__swiper')
+	}
+
 	//BildSlider
 	let sliders = document.querySelectorAll('[class*="__swiper"]:not(.swiper-wrapper)');
 	if (sliders) {
@@ -76,6 +83,7 @@ export function bildSliders() {
 
 	function sliders_bild_callback(params) {
 	}
+
 }
 // Инициализация слайдеров
 function initSliders() {

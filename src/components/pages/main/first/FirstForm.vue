@@ -78,8 +78,20 @@ export default {
 
 <style  lang="scss">
 @import "@/assets/scss/style.scss";
+.firstForm{
+  .button-y{
+    max-width: rem(212);
+    width: 100%;
+    margin: auto;
+    @include mq('tablet-wide') {
+
+    }
+  }
+}
+
 
 .firstForm__select {
+
   .vs__clear{
     display: none;
   }
@@ -146,11 +158,13 @@ export default {
 .vs--open .select-arrow{
   transform: scaleY(-1) !important;
 }
+
 .firstForm__input{
   padding: rem(17) rem(20);
   border-radius: rem(8);
   font-size: rem(14);
 }
+
 .firstForm{
   display: grid;
   grid-gap: rem(24) rem(24);
@@ -171,4 +185,5 @@ export default {
     }
   }
 }
+
 </style>

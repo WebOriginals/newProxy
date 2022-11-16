@@ -24,8 +24,8 @@ $color_2: #F6F7F9;
 $color_3: #DDE0E4;
 
 //темные
-$color_4: #0D2839;
-$color_5: #414042;
+$color_4: #6E7072;
+$color_5: #939598;
 $color_6: #FF9501;
 
 
@@ -63,6 +63,9 @@ body {
   .lock & {
     overflow: hidden;
     touch-action: none;
+  }
+  *{
+    transition: .5s;
   }
 }
 
