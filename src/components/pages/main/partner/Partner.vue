@@ -31,8 +31,6 @@
 
 <script>
 import {Swiper, SwiperSlide} from 'swiper/vue';
-//import 'swiper/css';
-//import "swiper/css/pagination";
 import {Pagination} from "swiper";
 
 export default {
@@ -62,7 +60,6 @@ export default {
       }
     }
   },
-
 }
 </script>
 

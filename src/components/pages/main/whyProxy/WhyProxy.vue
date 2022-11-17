@@ -93,7 +93,6 @@ section.whyProxy
 </template>
 
 <script>
-
 import 'swiper/css';
 import "swiper/css/pagination";
 import WhyProxyCard from "@/components/pages/main/whyProxy/WhyProxyCard.vue";

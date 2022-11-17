@@ -7,6 +7,8 @@ import PartnerProgram from "@/components/pages/main/partnerProgram/PartnerProgra
 import ProxyEveryone from "@/components/pages/main/proxyEveryone/ProxyEveryone.vue";
 import Partner from "@/components/pages/main/partner/Partner.vue";
 import SeoText from "@/components/pages/main/seoText/SeoText.vue";
+import Reviews from "@/components/pages/main/reviews/Reviews.vue";
+import Footer from "@/components/footer/Footer.vue";
 </script>
 
 <template lang="pug">
@@ -18,11 +20,10 @@ import SeoText from "@/components/pages/main/seoText/SeoText.vue";
     Tab
     PartnerProgram
     ProxyEveryone
+    Reviews
     Partner
     SeoText
-  footer.footer
-    .footer__container
-      h1 htru
+  Footer
 
 
 </template>
