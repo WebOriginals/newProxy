@@ -75,7 +75,7 @@
 }
 
 //Стилизация ul
-ul {
+ul.greyPoint {
 
   li {
     padding-left: rem(15);
@@ -94,7 +94,7 @@ ul {
 }
 
 //Стилизация ol
-ol {
+ol.greyNumber {
   list-style-type: none;
   counter-reset: num;
   @include adaptiveValue(font-size, 14, 12);

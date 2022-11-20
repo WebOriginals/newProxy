@@ -101,7 +101,7 @@ export default {
     padding: 0;
   }
 
-  &-title {
+  .leng-title {
     display: flex;
     gap: rem(8);
     align-items: center;
@@ -122,6 +122,8 @@ export default {
 
   .vs__dropdown-menu {
     color: $mainColor;
+    border-radius: 0 0 8px 8px;
+    top: calc(93% - var(--vs-border-width));
   }
 
   .select-arrow{

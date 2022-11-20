@@ -2,10 +2,7 @@
 header.header
   .header__top
     .header__container.header__top-body
-      button.header__burger(@click="openMenu = !openMenu")
-        span
-        span
-        span
+      Burger(@click="openMenu = !openMenu")
       a.header__logo(href="/")
         svg(width='184', height='40', viewbox='0 0 184 40', fill='none', xmlns='http://www.w3.org/2000/svg')
           path(fill-rule='evenodd', clip-rule='evenodd', d='M5.3221 4.18269C1.39633 7.68268 -0.768589 11.7345 0.486623 13.2326C1.74183 14.7307 5.94188 13.1078 9.86761 9.60781C13.7934 6.10779 15.9583 2.056 14.7031 0.557895C13.4479 -0.940215 9.24791 0.682663 5.3221 4.18269ZM5.60569 4.50417C3.91008 5.92776 3.18431 7.65805 3.69686 8.3076C4.20936 8.95715 5.76606 8.28009 7.46167 6.85648C9.15735 5.43285 10.1165 3.75223 9.60399 3.10266C9.09146 2.45308 7.30136 3.08056 5.60569 4.50417Z', fill='#0A2051')
@@ -25,7 +22,7 @@ header.header
           path(d='M150.143 27.632C149.029 27.632 148.053 27.5293 147.217 27.324C146.381 27.104 145.677 26.708 145.105 26.136C144.548 25.5493 144.13 24.7133 143.851 23.628C143.573 22.5427 143.433 21.1273 143.433 19.382C143.433 17.6367 143.573 16.2213 143.851 15.136C144.145 14.036 144.57 13.1927 145.127 12.606C145.685 12.0193 146.381 11.616 147.217 11.396C148.053 11.176 149.029 11.066 150.143 11.066C151.258 11.066 152.233 11.176 153.069 11.396C153.905 11.616 154.602 12.0193 155.159 12.606C155.717 13.1927 156.135 14.036 156.413 15.136C156.692 16.2213 156.831 17.6367 156.831 19.382C156.831 21.1273 156.692 22.5427 156.413 23.628C156.135 24.7133 155.717 25.5493 155.159 26.136C154.602 26.708 153.905 27.104 153.069 27.324C152.233 27.5293 151.258 27.632 150.143 27.632ZM150.143 24.706C150.803 24.706 151.353 24.6327 151.793 24.486C152.233 24.3393 152.578 24.0827 152.827 23.716C153.091 23.3347 153.282 22.7993 153.399 22.11C153.517 21.406 153.575 20.4967 153.575 19.382C153.575 18.2087 153.517 17.27 153.399 16.566C153.282 15.862 153.091 15.3267 152.827 14.96C152.578 14.5787 152.233 14.322 151.793 14.19C151.353 14.058 150.803 13.992 150.143 13.992C149.513 13.992 148.977 14.058 148.537 14.19C148.097 14.322 147.738 14.5787 147.459 14.96C147.195 15.3267 146.997 15.862 146.865 16.566C146.748 17.27 146.689 18.2087 146.689 19.382C146.689 20.4967 146.741 21.406 146.843 22.11C146.961 22.7993 147.151 23.3347 147.415 23.716C147.679 24.0827 148.031 24.3393 148.471 24.486C148.926 24.6327 149.483 24.706 150.143 24.706Z', fill='#050608')
           path(d='M159.234 27.5V11.22H165.966C166.612 11.22 167.213 11.3007 167.77 11.462C168.328 11.6087 168.819 11.8727 169.244 12.254C169.67 12.6353 170 13.1633 170.234 13.838C170.484 14.5127 170.608 15.378 170.608 16.434C170.608 17.182 170.535 17.82 170.388 18.348C170.242 18.876 170.044 19.3087 169.794 19.646C169.56 19.9833 169.288 20.2547 168.98 20.46C168.672 20.6653 168.357 20.834 168.034 20.966L171.07 27.5H167.748L165.13 21.472C164.954 21.472 164.749 21.472 164.514 21.472C164.294 21.4573 164.067 21.45 163.832 21.45C163.598 21.45 163.363 21.45 163.128 21.45C162.894 21.45 162.681 21.4427 162.49 21.428V27.5H159.234ZM162.49 18.854H165.394C165.688 18.854 165.952 18.8173 166.186 18.744C166.421 18.6707 166.626 18.546 166.802 18.37C166.978 18.1793 167.11 17.93 167.198 17.622C167.301 17.314 167.352 16.918 167.352 16.434C167.352 15.9793 167.301 15.6053 167.198 15.312C167.11 15.004 166.978 14.7693 166.802 14.608C166.626 14.432 166.421 14.3147 166.186 14.256C165.952 14.1827 165.688 14.146 165.394 14.146H162.49V18.854Z', fill='#050608')
           path(d='M176.987 27.61C176.635 27.61 176.232 27.5733 175.777 27.5C175.323 27.4413 174.883 27.2947 174.457 27.06C174.047 26.8253 173.702 26.4733 173.423 26.004C173.159 25.52 173.027 24.86 173.027 24.024V14.938C173.027 14.2193 173.137 13.618 173.357 13.134C173.577 12.65 173.871 12.2687 174.237 11.99C174.604 11.7113 175.007 11.5133 175.447 11.396C175.887 11.2787 176.32 11.22 176.745 11.22C177.845 11.22 178.813 11.2347 179.649 11.264C180.5 11.2933 181.263 11.33 181.937 11.374C182.612 11.4033 183.228 11.4473 183.785 11.506V14.234H177.713C177.259 14.234 176.907 14.344 176.657 14.564C176.408 14.784 176.283 15.1213 176.283 15.576V17.93L182.729 18.106V20.68L176.283 20.856V23.1C176.283 23.4813 176.342 23.782 176.459 24.002C176.591 24.2073 176.76 24.354 176.965 24.442C177.185 24.5153 177.413 24.552 177.647 24.552H183.785V27.28C183.14 27.3533 182.421 27.412 181.629 27.456C180.852 27.5 180.06 27.5367 179.253 27.566C178.461 27.5953 177.706 27.61 176.987 27.61Z', fill='#050608')
-      a.header__link(href="") FAQ
+      a.header__link(href="" ) FAQ
       a.header__link(href="") Блог
       a.header__link(href="") Контакты
       a.header__link.header-link-ic(href="")
@@ -41,30 +38,54 @@ header.header
             svg(width='9', height='16', viewbox='0 0 9 16', fill='none', xmlns='http://www.w3.org/2000/svg')
               path(d='M9.00004 0.666626H0.333374V15.3333H9.00004V0.666626ZM4.66671 14.6666C4.11337 14.6666 3.66671 14.22 3.66671 13.6666C3.66671 13.1133 4.11337 12.6666 4.66671 12.6666C5.22004 12.6666 5.66671 13.1133 5.66671 13.6666C5.66671 14.22 5.22004 14.6666 4.66671 14.6666ZM7.66671 12H1.66671V2.66663H7.66671V12Z', fill='#282C97')
           template(v-slot:DDL)
-            a.dropDownList__link(href="") сканер портов1
-            a.dropDownList__link(href="") сканер портов2
-            a.dropDownList__link(href="") сканер портов3
-            a.dropDownList__link(href="") сканер портов4
+            .dropDownList__wrapper.grid
+              a.dropDownList__link(href="")
+                img(src="@_/assets/img/png/RU.png")
+                span Россия
+
+
+              a.dropDownList__link(href="")
+                img(src="@_/assets/img/png/UA.png")
+                span Украина
+              a.dropDownList__link(href="")
+                img(src="@_/assets/img/png/RO.png")
+                span Румыния
+
+
+              a.dropDownList__link(href="")
+                img(src="@_/assets/img/png/RU.png")
+                span Россия
+
+
+              a.dropDownList__link(href="")
+                img(src="@_/assets/img/png/UA.png")
+                span Украина
+              a.dropDownList__link(href="")
+                img(src="@_/assets/img/png/RO.png")
+                span Румыния
+
 
         DropDownList(title="Серверные прокси IPv4")
           template(v-slot:icon)
             svg(width='14', height='14', viewbox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
               path(d='M6.79997 0.333374C3.11997 0.333374 0.133301 3.32004 0.133301 7.00004C0.133301 10.68 3.11997 13.6667 6.79997 13.6667C10.48 13.6667 13.4666 10.68 13.4666 7.00004C13.4666 3.32004 10.48 0.333374 6.79997 0.333374ZM6.1333 12.2867C3.49997 11.96 1.46663 9.72004 1.46663 7.00004C1.46663 6.58671 1.51997 6.19337 1.60663 5.80671L4.79997 9.00004V9.66671C4.79997 10.4 5.39997 11 6.1333 11V12.2867ZM10.7333 10.5934C10.56 10.0534 10.0666 9.66671 9.46663 9.66671H8.79997V7.66671C8.79997 7.30004 8.49997 7.00004 8.1333 7.00004H4.1333V5.66671H5.46663C5.8333 5.66671 6.1333 5.36671 6.1333 5.00004V3.66671H7.46663C8.19997 3.66671 8.79997 3.06671 8.79997 2.33337V2.06004C10.7533 2.85337 12.1333 4.76671 12.1333 7.00004C12.1333 8.38671 11.6 9.64671 10.7333 10.5934Z', fill='#282C97')
           template(v-slot:DDL)
-            a.dropDownList__link(href="") сканер портов1
-            a.dropDownList__link(href="") сканер портов2
-            a.dropDownList__link(href="") сканер портов3
-            a.dropDownList__link(href="") сканер портов4
+            .dropDownList__wrapper
+              a.dropDownList__link(href="") сканер портов1
+              a.dropDownList__link(href="") сканер портов2
+              a.dropDownList__link(href="") сканер портов3
+              a.dropDownList__link(href="") сканер портов4
 
         DropDownList(title="Прокси для")
           template(v-slot:icon)
             svg(width='17', height='12', viewbox='0 0 17 12', fill='none', xmlns='http://www.w3.org/2000/svg')
               path(d='M15.2668 10V0H1.93343V10H0.600098V11.3333H16.6001V10H15.2668ZM9.93343 10H7.26676V9.33333H9.93343V10ZM13.9334 8H3.26676V1.33333H13.9334V8Z', fill='#282C97')
           template(v-slot:DDL)
-            a.dropDownList__link(href="") сканер портов1
-            a.dropDownList__link(href="") сканер портов2
-            a.dropDownList__link(href="") сканер портов3
-            a.dropDownList__link(href="") сканер портов4
+            .dropDownList__wrapper
+              a.dropDownList__link(href="") сканер портов1
+              a.dropDownList__link(href="") сканер портов2
+              a.dropDownList__link(href="") сканер портов3
+              a.dropDownList__link(href="") сканер портов4
 
         DropDownList(title="Инструменты")
           template(v-slot:icon)
@@ -72,10 +93,11 @@ header.header
               path(d='M10.0026 7.70042L8.58838 9.11462L12.5859 13.1121L14.0001 11.6979L10.0026 7.70042Z', fill='#282C97')
               path(d='M11.0665 5.6667C12.3531 5.6667 13.3998 4.62003 13.3998 3.33337C13.3998 2.9467 13.2931 2.5867 13.1265 2.2667L11.3265 4.0667L10.3331 3.07337L12.1331 1.27337C11.8131 1.1067 11.4531 1.00003 11.0665 1.00003C9.7798 1.00003 8.73314 2.0467 8.73314 3.33337C8.73314 3.6067 8.78647 3.8667 8.87314 4.1067L7.6398 5.34003L6.45314 4.15337L6.92647 3.68003L5.98647 2.74003L7.3998 1.3267C6.6198 0.546699 5.35314 0.546699 4.57314 1.3267L2.21314 3.6867L3.15314 4.6267H1.27314L0.799805 5.10003L3.1598 7.46003L3.63314 6.9867V5.10003L4.57314 6.04003L5.04647 5.5667L6.23314 6.75337L1.29314 11.6934L2.70647 13.1067L10.2931 5.5267C10.5331 5.61337 10.7931 5.6667 11.0665 5.6667Z', fill='#282C97')
           template(v-slot:DDL)
-            a.dropDownList__link(href="") сканер портов1
-            a.dropDownList__link(href="") сканер портов2
-            a.dropDownList__link(href="") сканер портов3
-            a.dropDownList__link(href="") сканер портов4
+            .dropDownList__wrapper
+              a.dropDownList__link(href="") сканер портов1
+              a.dropDownList__link(href="") сканер портов2
+              a.dropDownList__link(href="") сканер портов3
+              a.dropDownList__link(href="") сканер портов4
 
 
         a.header__link.header-link-ic(href="")
@@ -97,30 +119,54 @@ header.header
           svg(width='9', height='16', viewbox='0 0 9 16', fill='none', xmlns='http://www.w3.org/2000/svg')
             path(d='M9.00004 0.666626H0.333374V15.3333H9.00004V0.666626ZM4.66671 14.6666C4.11337 14.6666 3.66671 14.22 3.66671 13.6666C3.66671 13.1133 4.11337 12.6666 4.66671 12.6666C5.22004 12.6666 5.66671 13.1133 5.66671 13.6666C5.66671 14.22 5.22004 14.6666 4.66671 14.6666ZM7.66671 12H1.66671V2.66663H7.66671V12Z', fill='#282C97')
         template(v-slot:DDL)
-          a.dropDownList__link(href="") сканер портов1
-          a.dropDownList__link(href="") сканер портов2
-          a.dropDownList__link(href="") сканер портов3
-          a.dropDownList__link(href="") сканер портов4
+          .dropDownList__wrapper.grid
+            a.dropDownList__link(href="")
+              img(src="@_/assets/img/png/RU.png")
+              span Россия
+
+
+            a.dropDownList__link(href="")
+              img(src="@_/assets/img/png/UA.png")
+              span Украина
+            a.dropDownList__link(href="")
+              img(src="@_/assets/img/png/RO.png")
+              span Румыния
+
+
+            a.dropDownList__link(href="")
+              img(src="@_/assets/img/png/RU.png")
+              span Россия
+
+
+            a.dropDownList__link(href="")
+              img(src="@_/assets/img/png/UA.png")
+              span Украина
+            a.dropDownList__link(href="")
+              img(src="@_/assets/img/png/RO.png")
+              span Румыния
+
 
       DropDownList(title="Серверные прокси IPv4")
         template(v-slot:icon)
           svg(width='14', height='14', viewbox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
             path(d='M6.79997 0.333374C3.11997 0.333374 0.133301 3.32004 0.133301 7.00004C0.133301 10.68 3.11997 13.6667 6.79997 13.6667C10.48 13.6667 13.4666 10.68 13.4666 7.00004C13.4666 3.32004 10.48 0.333374 6.79997 0.333374ZM6.1333 12.2867C3.49997 11.96 1.46663 9.72004 1.46663 7.00004C1.46663 6.58671 1.51997 6.19337 1.60663 5.80671L4.79997 9.00004V9.66671C4.79997 10.4 5.39997 11 6.1333 11V12.2867ZM10.7333 10.5934C10.56 10.0534 10.0666 9.66671 9.46663 9.66671H8.79997V7.66671C8.79997 7.30004 8.49997 7.00004 8.1333 7.00004H4.1333V5.66671H5.46663C5.8333 5.66671 6.1333 5.36671 6.1333 5.00004V3.66671H7.46663C8.19997 3.66671 8.79997 3.06671 8.79997 2.33337V2.06004C10.7533 2.85337 12.1333 4.76671 12.1333 7.00004C12.1333 8.38671 11.6 9.64671 10.7333 10.5934Z', fill='#282C97')
         template(v-slot:DDL)
-          a.dropDownList__link(href="") сканер портов1
-          a.dropDownList__link(href="") сканер портов2
-          a.dropDownList__link(href="") сканер портов3
-          a.dropDownList__link(href="") сканер портов4
+          .dropDownList__wrapper
+            a.dropDownList__link(href="") сканер портов1
+            a.dropDownList__link(href="") сканер портов2
+            a.dropDownList__link(href="") сканер портов3
+            a.dropDownList__link(href="") сканер портов4
 
       DropDownList(title="Прокси для")
         template(v-slot:icon)
           svg(width='17', height='12', viewbox='0 0 17 12', fill='none', xmlns='http://www.w3.org/2000/svg')
             path(d='M15.2668 10V0H1.93343V10H0.600098V11.3333H16.6001V10H15.2668ZM9.93343 10H7.26676V9.33333H9.93343V10ZM13.9334 8H3.26676V1.33333H13.9334V8Z', fill='#282C97')
         template(v-slot:DDL)
-          a.dropDownList__link(href="") сканер портов1
-          a.dropDownList__link(href="") сканер портов2
-          a.dropDownList__link(href="") сканер портов3
-          a.dropDownList__link(href="") сканер портов4
+          .dropDownList__wrapper
+            a.dropDownList__link(href="") сканер портов1
+            a.dropDownList__link(href="") сканер портов2
+            a.dropDownList__link(href="") сканер портов3
+            a.dropDownList__link(href="") сканер портов4
 
       DropDownList(title="Инструменты")
         template(v-slot:icon)
@@ -128,10 +174,11 @@ header.header
             path(d='M10.0026 7.70042L8.58838 9.11462L12.5859 13.1121L14.0001 11.6979L10.0026 7.70042Z', fill='#282C97')
             path(d='M11.0665 5.6667C12.3531 5.6667 13.3998 4.62003 13.3998 3.33337C13.3998 2.9467 13.2931 2.5867 13.1265 2.2667L11.3265 4.0667L10.3331 3.07337L12.1331 1.27337C11.8131 1.1067 11.4531 1.00003 11.0665 1.00003C9.7798 1.00003 8.73314 2.0467 8.73314 3.33337C8.73314 3.6067 8.78647 3.8667 8.87314 4.1067L7.6398 5.34003L6.45314 4.15337L6.92647 3.68003L5.98647 2.74003L7.3998 1.3267C6.6198 0.546699 5.35314 0.546699 4.57314 1.3267L2.21314 3.6867L3.15314 4.6267H1.27314L0.799805 5.10003L3.1598 7.46003L3.63314 6.9867V5.10003L4.57314 6.04003L5.04647 5.5667L6.23314 6.75337L1.29314 11.6934L2.70647 13.1067L10.2931 5.5267C10.5331 5.61337 10.7931 5.6667 11.0665 5.6667Z', fill='#282C97')
         template(v-slot:DDL)
-          a.dropDownList__link(href="") сканер портов1
-          a.dropDownList__link(href="") сканер портов2
-          a.dropDownList__link(href="") сканер портов3
-          a.dropDownList__link(href="") сканер портов4
+          .dropDownList__wrapper
+            a.dropDownList__link(href="") сканер портов1
+            a.dropDownList__link(href="") сканер портов2
+            a.dropDownList__link(href="") сканер портов3
+            a.dropDownList__link(href="") сканер портов4
 
 
       a.header__link.header-link-ic(href="")
@@ -146,46 +193,46 @@ header.header
         svg(width='14', height='14', viewbox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
           path(d='M6.99992 0.333374C3.31992 0.333374 0.333252 3.32004 0.333252 7.00004C0.333252 10.68 3.31992 13.6667 6.99992 13.6667C10.6799 13.6667 13.6666 10.68 13.6666 7.00004C13.6666 3.32004 10.6799 0.333374 6.99992 0.333374ZM7.93992 11.06V12.3334H6.15992V11.0467C5.01992 10.8067 4.05325 10.0734 3.97992 8.78004H5.28659C5.35325 9.48004 5.83325 10.0267 7.05325 10.0267C8.35992 10.0267 8.65325 9.37337 8.65325 8.96671C8.65325 8.41337 8.35992 7.89337 6.87325 7.54004C5.21992 7.14004 4.08659 6.46004 4.08659 5.09337C4.08659 3.94671 5.01325 3.20004 6.15992 2.95337V1.66671H7.93992V2.96671C9.17992 3.26671 9.79992 4.20671 9.83992 5.22671H8.53325C8.49992 4.48671 8.10659 3.98004 7.05325 3.98004C6.05325 3.98004 5.45325 4.43337 5.45325 5.07337C5.45325 5.63337 5.88659 6.00004 7.23325 6.34671C8.57992 6.69337 10.0199 7.27337 10.0199 8.95337C10.0133 10.1734 9.09992 10.84 7.93992 11.06Z', fill='#282C97')
         span Цены
+      .header-mobile__phone
+        h3 О компании
 
 </template>
 
 <script>
 import DropDownList from "@/components/header/DropDownList.vue";
+import Burger from "@/components/header/Burger.vue";
+import {bodyLock, bodyUnlock, isMobile, addTouchClass} from "@/assets/js/files/functions";
+
 export default {
   name: "Header",
-  components: {DropDownList},
-  data(){
-    return{
+  components: {Burger, DropDownList},
+  data() {
+    return {
       openMenu: false
     }
+  },
+  watch: {
+    openMenu() {
+      this.openMenu ? bodyLock() : bodyUnlock()
+    }
+  },
+  mounted() {
+    addTouchClass()
   }
 }
 </script>
 
 <style lang="scss">
 @import "@/assets/scss/style.scss";
-.header{
+
+.header {
   padding: 10px 0;
 
-  &__burger{
-    display: none;
-    @include maq('desktop') {
-      display: grid;
-      grid-gap: rem(5);
-
-      span {
-        width: rem(30);
-        height: rem(4);
-        background: $mainColor;
-      }
-    }
-  }
-
-  &__logo{
+  &__logo {
     margin-right: auto;
   }
 
-  &__top-body{
+  &__top-body {
     display: flex;
     @include adaptiveValue(gap, 32, 24);
     align-items: center;
@@ -196,48 +243,83 @@ export default {
     }
   }
 
-  &-link-ic{
+  &-link-ic {
     display: flex;
     gap: rem(12);
     align-items: center;
   }
 
-  &__bottom{
+  &__bottom {
     border-top: 2px solid $color_3;
     @include maq('desktop') {
       display: none;
     }
   }
 
-  &__bottom-body{
+  &__bottom-body {
     padding-top: rem(24);
     display: flex;
     gap: rem(30);
     justify-content: space-between;
 
-    span{
+    span {
       font-size: rem(14);
     }
   }
 
-  &__mobile{
+  &__mobile {
     background: rgba(5, 6, 8, 0.58);
     position: absolute;
     left: 0;
-    top:65px;
+    top: 65px;
     width: 100%;
     height: calc(100% - 65px);
+    z-index: 15;
+
     @include mq('desktop') {
       display: none;
     }
-    &-body{
-      background: $color_1;
+
+    &-body {
+      background: #fff;
       width: rem(320);
       height: 100%;
-      padding: rem(45) rem(43);
-
-      span{
+      padding: rem(30) rem(43);
+      display: grid;
+      //grid-gap: rem(16);
+      align-content: flex-start;
+      border-top: 1px solid #DDE0E4;
+      span {
         font-size: rem(16);
+      }
+    }
+
+    .header-link-DDL,.header-link-ic{
+      border-bottom: 1px solid #DDE0E4;
+      padding: rem(16) 0;
+    }
+
+    .dropDownList__wrapper{
+      padding: rem(16) 0 0 0;
+    }
+
+  }
+
+  .dropDownList__wrapper{
+    display: grid;
+    grid-gap: rem(16);
+    @include mq('tablet-wide') {
+      .dropDownList__link{
+        width: max-content;
+      }
+    }
+
+    &.grid{
+
+      @include mq('desktop') {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: rem(12);
+        border-radius: 0px 0px 16px 16px;
       }
     }
   }
