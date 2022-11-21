@@ -86,28 +86,35 @@ import Swiper, {Pagination} from 'swiper';
 
 export default {
   name: "ProxyEveryone",
+
+  methods:{
+    creatingSlider(){
+      // добавляя function bildSliders на разрешении ниже 767px
+      // Будет добавляться класс .whyProxy-grid__swiper блоку .proxyEveryone__cards
+      // и функция преобразует этот блок в классы слайдера. а все что веше
+      // разрешения 767px будет обычный грид
+      window.addEventListener('resize', function(event){
+        bildSliders();
+
+        //Скрипт слайдера
+        new Swiper('.proxyEveryone-cards__swiper', {
+          observer: true,
+          observeParents: true,
+          slidesPerView: 1.3,
+          spaceBetween: 16,
+          watchOverflow: true,
+          speed: 800,
+          modules: [Pagination],
+          pagination: {
+            el: ".proxyEveryone-cards-swiper__pagination",
+            clickable: true,
+          },
+        });
+      });
+    }
+  },
   mounted() {
-    // добавляя function bildSliders на разрешении ниже 767px
-    // Будет добавляться класс .whyProxy-grid__swiper блоку .proxyEveryone__cards
-    // и функция преобразует этот блок в классы слайдера. а все что веше
-    // разрешения 767px будет обычный грид
-
-    bildSliders();
-
-    //Скрипт слайдера
-    new Swiper('.proxyEveryone-cards__swiper', {
-      observer: true,
-      observeParents: true,
-      slidesPerView: 1.1,
-      spaceBetween: 16,
-      watchOverflow: true,
-      speed: 800,
-      modules: [Pagination],
-      pagination: {
-        el: ".proxyEveryone-cards-swiper__pagination",
-        clickable: true,
-      },
-    });
+    this.creatingSlider()
   },
 }
 </script>
@@ -120,6 +127,7 @@ export default {
   @include adaptiveValue(padding-bottom, 40, 28);
 
   &__grid {
+    min-width: 0;
 
     @include mq('tablet') {
       display: grid;
@@ -131,6 +139,7 @@ export default {
   }
 
   &__cards {
+    min-width: 0;
     @include mq('phablet') {
       display: grid;
       grid-template-columns: 1fr 1fr;

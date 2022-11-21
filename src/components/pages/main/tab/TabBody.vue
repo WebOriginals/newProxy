@@ -48,6 +48,8 @@ export default {
     @include maq('tablet') {
       width: 100%;
       overflow-x: auto;
+      height: 52px;
+      overflow-y: hidden;
     }
   }
   // .tabs__navigation
@@ -91,7 +93,8 @@ export default {
   // .tabs__body
   .tab__body {
     display: grid;
-    grid-gap: rem(40) rem(56);
+    grid-gap: rem(16) rem(24);
+
 
     @include mq('tablet') {
       grid-template-columns: 1fr 1fr;

@@ -5,6 +5,7 @@
   .countryForTabs__name {{country.name}}
   .countryForTabs__point
   .countryForTabs__price от ${{country.price}} / шт
+  button.button-y.countryForTabs__btn Перейти
 
 </template>
 
@@ -25,6 +26,10 @@ export default {
 .countryForTabs{
   display: flex;
   align-items: center;
+  position: relative;
+  padding: rem(16);
+  border-radius: rem(8);
+  cursor: pointer;
 
   &__icon{
     margin-right: rem(8);
@@ -42,6 +47,22 @@ export default {
   &__price{
     font-weight: 600;
 
+  }
+  &__btn{
+    @include adaptiveValue(font-size, 12, 12);
+    height: 34px;
+    min-width: rem(130);
+    opacity: 0;
+    position: absolute;
+    top: calc(50% - 17px);
+    right: rem(16);
+  }
+
+  &:hover {
+    background-color:  #F5F9FD;
+    .countryForTabs__btn{
+      opacity: 1;
+    }
   }
 }
 </style>

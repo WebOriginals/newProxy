@@ -96,35 +96,41 @@ section.whyProxy
 import 'swiper/css';
 import "swiper/css/pagination";
 import WhyProxyCard from "@/components/pages/main/whyProxy/WhyProxyCard.vue";
-import {bildSliders} from "@/assets/js/files/sliders";
+import {bildSliders} from "@/assets/js/files/sliders.js";
 import Swiper, { Pagination } from 'swiper';
 export default {
   name: "WhyProxy",
   components: {
     WhyProxyCard,
   },
+  methods:{
+    creatingSlider(){
+      // добавляя function bildSliders на разрешении ниже 767px
+      // Будет добавляться класс .whyProxy-grid__swiper блоку .whyProxy__grid
+      // и функция преобразует этот блок в классы слайдера. а все что веше
+      // разрешения 767px будет обычный грид
+
+      window.addEventListener('resize', function(event){
+        bildSliders();
+        //Скрипт слайдера
+        new Swiper('.whyProxy-grid__swiper', {
+          observer: true,
+          observeParents: true,
+          slidesPerView: 1.3,
+          spaceBetween: 16,
+          watchOverflow: true,
+          speed: 800,
+          modules: [Pagination],
+          pagination: {
+            el: ".whyProxy-grid-swiper__pagination",
+            clickable: true,
+          },
+        });
+      });
+    }
+  },
   mounted() {
-    // добавляя function bildSliders на разрешении ниже 767px
-    // Будет добавляться класс .whyProxy-grid__swiper блоку .whyProxy__grid
-    // и функция преобразует этот блок в классы слайдера. а все что веше
-    // разрешения 767px будет обычный грид
-
-    bildSliders();
-
-    //Скрипт слайдера
-    new Swiper('.whyProxy-grid__swiper', {
-      observer: true,
-      observeParents: true,
-      slidesPerView: 1.3,
-      spaceBetween: 16,
-      watchOverflow: true,
-      speed: 800,
-      modules: [Pagination],
-      pagination: {
-        el: ".whyProxy-grid-swiper__pagination",
-        clickable: true,
-      },
-    });
+    this.creatingSlider()
   },
 
 }

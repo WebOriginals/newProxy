@@ -89,7 +89,6 @@ export default {
   }
 }
 
-
 .firstForm__select {
 
   .vs__clear{
@@ -167,6 +166,19 @@ export default {
   font-size: rem(14);
 }
 
+.vs__dropdown-option--deselect,
+.vs__dropdown-option--selected,
+.vs__dropdown-option--highlight,
+.vs__dropdown-option--disabled{
+  background-color: transparent;
+  color: $mainColor;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: transparent;
+      color: $color_6;
+    }
+  }
+}
 .firstForm{
   display: grid;
   grid-gap: rem(24) rem(24);

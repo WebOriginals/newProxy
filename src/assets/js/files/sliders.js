@@ -22,6 +22,7 @@ EffectFade, Lazy, Manipulation
 // Добавление классов слайдерам
 // swiper главному блоку, swiper-wrapper оболочке, swiper-slide для слайдов
 export function bildSliders() {
+
 	if (window.outerWidth <= 766 && document.querySelector('.whyProxy__grid')) {
 		const slider = document.querySelector('.whyProxy__grid');
 		slider.classList.add('whyProxy-grid__swiper')

@@ -1,10 +1,10 @@
 <template lang="pug">
-.header__link.header-link-DDL(@click="this.isOpenSecondLevel" )
+.header__link.header-link-DDL(@click="this.isOpenSecondLevel" @mouseover="isHidden = true" @mouseleave="isHidden = false" )
   slot(name="icon")
   span {{ title }}
   svg(class="arrow" :class="{active : isHidden}" width='8', height='6', viewbox='0 0 8 6', fill='none', xmlns='http://www.w3.org/2000/svg')
     path(d='M4 5.24999L0 1.24999L0.716667 0.533325L4 3.83333L7.28333 0.549992L8 1.26666L4 5.24999Z', fill='#050608')
-  .header-link-DDL__List(ref="SL" v-show="isHidden" )
+  .header-link-DDL__List(ref="SL" v-show="isHidden")
     slot(name="DDL")
 
 </template>
