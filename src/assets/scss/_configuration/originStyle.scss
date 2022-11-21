@@ -44,7 +44,7 @@
   align-items: center;
   height: 57px;
   cursor: pointer;
-  transition: .5s;
+  transition: .3s;
   @include adaptiveValue(font-size, 18, 14);
   font-weight: 600;
   border-radius: rem(8);

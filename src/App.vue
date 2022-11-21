@@ -9,12 +9,14 @@ import Partner from "@/components/pages/main/partner/Partner.vue";
 import SeoText from "@/components/pages/main/seoText/SeoText.vue";
 import Reviews from "@/components/pages/main/reviews/Reviews.vue";
 import Footer from "@/components/footer/Footer.vue";
+import FirstService from "./components/pages/service/FirstService.vue";
 </script>
 
 <template lang="pug">
 .wrapper
   Header
   main.page
+    FirstService
     First
     WhyProxy
     Tab
