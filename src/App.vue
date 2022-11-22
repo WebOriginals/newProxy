@@ -9,7 +9,7 @@ import Partner from "@/components/pages/main/partner/Partner.vue";
 import SeoText from "@/components/pages/main/seoText/SeoText.vue";
 import Reviews from "@/components/pages/main/reviews/Reviews.vue";
 import Footer from "@/components/footer/Footer.vue";
-import FirstService from "./components/pages/service/FirstService.vue";
+import FirstService from "./components/pages/service/firstService/FirstService.vue";
 </script>
 
 <template lang="pug">
