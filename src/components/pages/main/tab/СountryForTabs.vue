@@ -1,7 +1,7 @@
 <template lang="pug">
 .countryForTabs
   .countryForTabs__icon
-    img(:src='country.icon')
+    img(:src='country.icon' :alt="country.name")
   .countryForTabs__name {{country.name}}
   .countryForTabs__point
   .countryForTabs__price от ${{country.price}} / шт

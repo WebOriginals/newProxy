@@ -15,7 +15,13 @@
 
 <script>
 export default {
-  name: "Card"
+  name: "Card",
+  props:{
+    cardProxy:{
+      type: Object,
+      required: true,
+    }
+  }
 }
 </script>
 
