@@ -150,6 +150,9 @@ p{
   }
 }
 
+section{
+  overflow: hidden;
+}
 // стили заголовков, кнопок, списков
 @import "_configuration/originStyle";
 

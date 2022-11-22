@@ -1,5 +1,5 @@
 <template lang="pug">
-.reviews
+section.reviews
   .reviews__bg-ibg
     picture
       source(srcset="@_/assets/img/svg/reviews1.svg" media="(min-width: 1024px)")

@@ -301,6 +301,8 @@ export function spollers() {
 					if (oneSpoller && !spollerTitle.classList.contains('_spoller-active')) {
 						hideSpollersBody(spollersBlock);
 					}
+
+					spollersBlock.classList.toggle('_spollers-active');
 					spollerTitle.classList.toggle('_spoller-active');
 					_slideToggle(spollerTitle.nextElementSibling, 500);
 				}

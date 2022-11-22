@@ -13,7 +13,7 @@ section.firstService
 </template>
 
 <script>
-import CardService from "@/components/pages/service/CardService.vue";
+import CardService from "@/components/pages/service/firstService/CardService.vue";
 export default {
   name: "FirstService",
   components: {CardService},
@@ -38,20 +38,41 @@ export default {
   @include adaptiveValue(padding-bottom, 80, 62);
   background: linear-gradient(122.83deg, #262C92 5.46%, #091F50 69.61%);
   color: #fff;
+  position: relative;
 
+  @include maq('tablet-small') {
+    &:before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      z-index: 0;
+    }
+  }
   &__bg-ibg{
     position: absolute;
-    top: 0;
+    bottom: 26em;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 5em;
     z-index: 0;
 
+    @include mq('tablet-small') {
+      bottom: -5em;
+      height: 13em;
+    }
+    @include mq('desktop') {
+      height: 16em;
+    }
+    @include mq('2K') {
+      height: 21em;
+    }
     img{
-      object-position:  0 100%;
-      height: 25%;
       top: auto;
-      bottom: -100px;
+      bottom: 0;
     }
   }
 
@@ -97,7 +118,11 @@ export default {
     grid-area: grid;
     background-color: #F5F9FD;
     border-radius: 16px;
-    @include adaptiveValue(padding, 33, 25);
+    @include adaptiveValue(padding-left, 33, 25);
+    @include adaptiveValue(padding-right, 33, 25);
+    @include adaptiveValue(padding-top, 33, 10);
+    @include adaptiveValue(padding-bottom, 33, 10);
+
     display: flex;
     box-shadow: 0px 8px 32px rgba(0, 58, 206, 0.08), 0px 16px 16px rgba(0, 58, 206, 0.04);
 
