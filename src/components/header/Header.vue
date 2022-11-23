@@ -257,6 +257,7 @@ export default {
 
 .header {
   padding: 10px 0;
+  filter: drop-shadow(0px 8px 32px rgba(0, 58, 206, 0.08)) drop-shadow(0px 16px 16px rgba(0, 58, 206, 0.04));
 
   &__logo {
     margin-right: auto;

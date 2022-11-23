@@ -3,7 +3,7 @@ import "@/assets/scss/style.scss";
 import { createApp, h } from 'vue';
 import App from './App.vue';
 import vSelect from 'vue-select';
-import Header from "@/components/Header.vue";
+import Header from "@/components/header/Header.vue";
 
 vSelect.props.components.default = () => ({
     OpenIndicator: {

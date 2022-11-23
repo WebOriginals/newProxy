@@ -1,6 +1,7 @@
 <template lang="pug">
 section.spollerService
   .spollerService__container
+    h2.spollerService__title FAQ
     CardSpoller(v-for="spollerService in spollersService" :key="spollerService.id" :spoller-service="spollerService")
 </template>
 
@@ -25,5 +26,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/style.scss";
+.spollerService{
+  @include adaptiveValue(padding-top, 40, 28);
+  @include adaptiveValue(padding-bottom, 40, 28);
 
+}
 </style>

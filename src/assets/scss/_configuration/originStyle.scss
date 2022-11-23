@@ -65,6 +65,37 @@
   }
 }
 
+.button-bor-y {
+  background: transparent;
+  color: $color_6;
+  padding: 0 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57px;
+  cursor: pointer;
+  transition: .3s;
+  @include adaptiveValue(font-size, 18, 14);
+  font-weight: 600;
+  border-radius: rem(8);
+  border: 2px solid $color_6;
+
+  @include mq('tablet-wide') {
+    min-width: rem(188);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: darken($color_6, 5);
+      color: $color_1;
+    }
+  }
+
+  &:focus {
+    background: darken($color_6, 5);
+  }
+}
+
 //Стилизация input
 .input {
   background: #FFFFFF;
@@ -72,6 +103,32 @@
   box-sizing: border-box;
   border-radius: 5px;
   padding: em(16) em(20);
+}
+
+.input-bg-bor{
+  background: #F5F9FD;
+  border: 1px solid #DDE0E4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: em(16) em(20);
+  font-size: rem(16);
+  font-weight: 400;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+
+  &::placeholder{
+    color: #909DAD;
+  }
+
+  &:focus,&:hover{
+    border-color: $color_6;
+    outline-color: $color_6;
+  }
+
+  &.error{
+    background: rgba(221, 0, 0, 0.05);
+    border: 1px solid #DD0000;
+  }
 }
 
 //Стилизация ul

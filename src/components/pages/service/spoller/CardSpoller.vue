@@ -28,8 +28,25 @@ export default {
 
 .spollers {
   display: grid;
-  //gap: 15px;
   align-content: flex-start;
+  position: relative;
+
+  &:before{
+    content:'';
+    width: rem(26);
+    height: rem(26);
+    border-radius: 50%;
+    background-color: $color_6;
+    transition: transform 0.5s ease 0s;
+    position: absolute;
+    top: 19px;
+    right: 12px;
+  }
+  &._spollers-active{
+    &:before{
+      background-color: #DDE0E4;
+    }
+  }
 }
 
 .spollers__wrapper{
@@ -59,7 +76,8 @@ export default {
   font-size: rem(18);
   position: relative;
   color: $mainColor;
-  font-weight: 700;
+  font-weight: 600;
+  @include adaptiveValue(font-size, 18,14);
 
   ._spoller-init & {
     cursor: pointer;
@@ -67,38 +85,45 @@ export default {
     &::after {
       content: "";
       position: absolute;
-      right: 10px;
+      right: 20px;
       top: 50%;
-      background-color: #000;
+      background-color: #fff;
       height: 2px;
-      width: 15px;
+      width: 10px;
       transition: transform 0.5s ease 0s;
+      border-radius: 5px;
     }
-    &::before {
-      transform: translate(-75%, -50%) rotate(40deg);
-    }
+
     &::after {
-      transform: translate(0, -50%) rotate(-40deg);
+      transform: translate(0, 0) rotate(90deg);
     }
     &._spoller-active {
 
 
       &::before {
-        transform: translateX(-75%) rotate(-40deg);
-        background-color: $color_6;
+        background-color: #fff;
       }
       &::after {
-        transform: rotate(40deg);
-        background-color: $color_6;
+        transform: rotate(0deg);
+        background-color: #fff;
       }
     }
   }
 }
 // Контент спойлера
 .spollers__body {
-  padding: rem(20);
+  @include adaptiveValue(padding-left, 32,16);
+  @include adaptiveValue(padding-right, 32,16);
+  @include adaptiveValue(padding-bottom, 24,24);
+  @include adaptiveValue(padding-top, 5,5);
   border-radius: rem(11);
-  //border: 1px solid #c4c4c4;
+
+
+  p{
+    font-weight: 400;
+    @include adaptiveValue(font-size, 16,14);
+    color: #6E7072;
+  }
 }
 
 
